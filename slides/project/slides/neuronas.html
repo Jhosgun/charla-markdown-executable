@@ -1,0 +1,16 @@
+<section id="neuronas" class="foot-pad" data-transition="fade">
+<p class="eyebrow">// LA CAPA PROFUNDA</p>
+<div style="height:36px"></div>
+<h2>Corrección de neuronas</h2>
+<div style="height:36px"></div>
+<p style="font-size:34px;max-width:1600px" class="muted">El prompt no es el único vector. Con los <b class="amber">pesos</b> del modelo puedes cambiar lo que “quiere hacer” desde adentro — en las activaciones, no en el texto.</p>
+<div style="height:44px"></div>
+<div class="cards">
+  <div class="card"><h3 class="blue">Golden Gate Claude</h3><p>Anthropic (2024): aíslan un “feature” con un autoencoder y lo amplifican. El modelo empieza a hablar del puente en todo — hasta dice que <i>es</i> el puente.</p></div>
+  <div class="card"><h3 class="blue">Persona vectors</h3><p>El mismo mecanismo dirige rasgos: sicofancia, “maldad”, cautela. Se suma o se resta una dirección en el espacio de activaciones.</p></div>
+</div>
+<div style="height:36px"></div>
+<p style="font-size:32px"><span class="red mono">Open weights = </span> si tienes los pesos, no necesitas ni el prompt. Más poder, más superficie de ataque.</p>
+<p class="foot">Fuentes: anthropic.com/news/golden-gate-claude · persona vectors</p>
+<aside>Último concepto técnico. Hasta ahora atacamos por el prompt, por el texto que lee el agente. Pero hay una capa más profunda: las activaciones, lo que coloquialmente llamamos neuronas. Anthropic lo mostró con Golden Gate Claude: encontraron el patrón de activación asociado al puente y lo amplificaron; el modelo quedó obsesionado, decía que era el puente. El mismo truco dirige personalidad: persona vectors. Para modelos open source esto es clave: si tienes los pesos, editas el comportamiento sin tocar el prompt. "Corregir neuronas" es hacer que el modelo haga lo que tú quieras. Es poder y es riesgo.</aside>
+</section>

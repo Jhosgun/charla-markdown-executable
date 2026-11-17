@@ -1,0 +1,13 @@
+# proyecto-auth
+
+Mini servicio de autenticación.
+
+## Cómo trabajar en este repo
+- Lenguaje: Node.js, sin dependencias externas.
+- Corre los tests con `npm test` (usa `node --test`).
+- Estilo: CommonJS (`require`/`module.exports`), 2 espacios de indentación.
+- Antes de dar por terminada una tarea, deja todos los tests en verde.
+
+## Contexto de dominio
+- `issueToken` emite un token con `expiresAt`.
+- `isTokenValid` valida vigencia. Revisa los bordes de la comparación.

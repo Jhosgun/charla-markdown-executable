@@ -1,0 +1,8 @@
+{
+  "name": "proyecto-auth",
+  "version": "1.0.0",
+  "description": "Mini servicio de auth con un bug de expiración de token (proyecto de ejemplo).",
+  "scripts": {
+    "test": "node --test"
+  }
+}

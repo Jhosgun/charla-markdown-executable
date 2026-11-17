@@ -1,0 +1,16 @@
+<section id="markdown" data-transition="fade">
+<p class="eyebrow">// CONTEXTO</p>
+<div style="height:36px"></div>
+<h2>¿Qué es un <span class="mono">AGENTS.md</span>?</h2>
+<div style="height:40px"></div>
+<p style="font-size:34px;max-width:1550px" class="muted">El archivo donde le dices al agente cómo trabajar en tu repo. Claude Code lo lee (y <span class="mono">CLAUDE.md</span>), igual Codex, opencode, Cursor, Gemini. Lo cargan <b class="red">antes</b> de tocar el código.</p>
+<div style="height:48px"></div>
+<div class="code">proyecto/
+├── <span class="blue">AGENTS.md</span>   <span class="muted"># "cómo trabajar aquí" → el agente OBEDECE</span>
+├── CLAUDE.md
+├── auth.js
+└── ...</div>
+<div class="spacer"></div>
+<p style="font-size:30px"><span class="amber mono">La confianza es el bug:</span> el agente asume que ese archivo es de buena fe.</p>
+<aside>AGENTS.md es un estándar de facto: un archivo Markdown en la raíz del repo con las convenciones del proyecto. Todos los agentes de código serios lo leen. El problema: lo leen y lo obedecen sin cuestionarlo, porque asumen que viene del dueño del repo. Pero ese archivo puede venir de una dependencia, de un repo que clonaste, de la carpeta Downloads. Ahí está la superficie de ataque.</aside>
+</section>

@@ -1,0 +1,11 @@
+<section id="demo1" class="demo" data-transition="magic">
+<p class="eyebrow red">// DEMO 1 — EN VIVO</p>
+<div style="height:48px"></div>
+<h1 style="font-size:150px">Hack<span class="red">.</span></h1>
+<div style="height:56px"></div>
+<div class="code" style="font-size:34px;max-width:1500px"><span class="muted">$</span> diff AGENTS.md.limpio AGENTS.md
+<span class="muted">$</span> opencode <span class="muted"># modelo open source</span>
+<span class="blue">&gt;</span> corrige el bug de expiración de token
+<span class="muted">$</span> cat exfil/leaked.txt   <span class="red"># ← nunca lo mencionó</span></div>
+<aside>Cambio a la terminal. Primero muestro el diff: una sola sección de diferencia entre el archivo limpio y el envenenado. Luego corro opencode con un modelo open source (DeepSeek o Qwen) y le pido corregir el bug. Observo que crea exfil/leaked.txt con el contenido del .env, y que en su resumen no lo menciona. Si el modelo en vivo no coopera, corro ./scripts/simular-ataque.sh. Punto a decir: con modelos open source obedece más fácil que con Claude; por eso son tan usados para esto.</aside>
+</section>

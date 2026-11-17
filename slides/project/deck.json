@@ -1,0 +1,37 @@
+{
+  "v": 5,
+  "createdOnFiles": { "v": 1, "at": "2026-11-16T19:00:00Z" },
+  "lists": "css",
+  "format": { "v": 1, "shared": ["project/deck.css"] },
+  "title": "Markdown is the New Executable",
+  "order": [
+    "cover",
+    "problema",
+    "markdown",
+    "timeline",
+    "tweet",
+    "ataque",
+    "demo1",
+    "defensa",
+    "demo2",
+    "neuronas",
+    "cierre"
+  ],
+  "sections": {
+    "s1": { "description": "El problema: los agentes leen Markdown como instrucciones.", "start": "cover" },
+    "s2": { "description": "Qué ha pasado en 2026 en seguridad de agentes.", "start": "timeline" },
+    "s3": { "description": "Demo del ataque y de la defensa.", "start": "ataque" },
+    "s4": { "description": "La capa profunda y el cierre.", "start": "neuronas" }
+  },
+  "faces": {
+    "ibm-plex-sans": {
+      "family": "IBM Plex Sans",
+      "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    },
+    "jetbrains-mono": {
+      "family": "JetBrains Mono",
+      "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+    }
+  },
+  "designSystems": []
+}
