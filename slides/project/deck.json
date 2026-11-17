@@ -6,22 +6,14 @@
   "title": "Markdown is the New Executable",
   "order": [
     "cover",
-    "problema",
-    "markdown",
-    "timeline",
-    "tweet",
-    "ataque",
     "demo1",
-    "defensa",
     "demo2",
-    "neuronas",
     "cierre"
   ],
   "sections": {
-    "s1": { "description": "El problema: los agentes leen Markdown como instrucciones.", "start": "cover" },
-    "s2": { "description": "Qué ha pasado en 2026 en seguridad de agentes.", "start": "timeline" },
-    "s3": { "description": "Demo del ataque y de la defensa.", "start": "ataque" },
-    "s4": { "description": "La capa profunda y el cierre.", "start": "neuronas" }
+    "s1": { "description": "El problema y los casos reales de 2026.", "start": "cover" },
+    "s2": { "description": "Demo en vivo: ataque y defensa.", "start": "demo1" },
+    "s3": { "description": "Cierre: principios de defensa.", "start": "cierre" }
   },
   "faces": {
     "ibm-plex-sans": {

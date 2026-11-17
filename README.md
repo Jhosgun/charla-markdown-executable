@@ -13,6 +13,13 @@ y cómo defenderlo de forma **determinista** con hooks y permisos.
 
 ---
 
+## Clonar y correr
+```bash
+git clone https://github.com/Jhosgun/charla-markdown-executable
+cd charla-markdown-executable
+cd demo-ataque/proyecto-auth && npm test   # verás fallar el bug
+```
+
 ## Qué hay aquí
 
 | Carpeta | Qué es |
