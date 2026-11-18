@@ -1,0 +1,31 @@
+<section id="demo3" data-transition="fade">
+<div style="display:flex;align-items:baseline;gap:28px">
+  <p class="eyebrow" style="margin:0;color:var(--sand)">// DEMO 3 — SKILL</p>
+  <p style="font-size:30px" class="muted">Claude se audita a sí mismo antes de confiar en un repo</p>
+</div>
+<div style="height:24px"></div>
+<div style="display:flex;gap:36px;flex:1">
+  <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+    <p style="font-size:26px" class="muted mono">en Claude Code:</p>
+    <div class="code" style="font-size:26px;line-height:1.5;flex:1"><span class="blue">&gt;</span> usa la skill <span class="brand">auditor-inyeccion</span>
+  para revisar repo-sospechoso
+
+<span class="muted"># la skill vive en .claude/skills/</span>
+<span class="muted"># → disponible al clonar el repo</span>
+<span class="muted"># corre scan.py + reveal.py</span></div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+    <p style="font-size:26px" class="muted mono">veredicto de Claude:</p>
+    <div class="code" style="font-size:24px;line-height:1.45;flex:1"><span class="red">⛔ BLOQUEADO</span>
+AGENTS.md  → exfil + "no avisar"
+CONTRIBUTING.md:
+  <span class="amber">comentario HTML oculto</span>
+  <span class="amber">36 chars zero-width</span>
+  <span class="amber">texto fuera de pantalla</span>
+<span class="green">↳ expone lo que el humano NO ve</span></div>
+  </div>
+</div>
+<div style="height:18px"></div>
+<p style="font-size:27px" class="brand mono">La defensa también es una skill: empaquétala y repártela. Probado en vivo con Claude.</p>
+<aside>Tercera demo: usar una skill. En .claude/skills/ del repo vive auditor-inyeccion, así que apenas alguien clona el repo y abre Claude Code, la skill está disponible. En vivo escribo: "usa la skill auditor-inyeccion para revisar repo-sospechoso". Claude carga la skill, corre scan.py y reveal.py, y da veredicto BLOQUEADO con la tabla de hallazgos — incluida la inyección OCULTA en CONTRIBUTING.md que un humano no ve. Mensaje: la defensa se empaqueta como skill y se reparte; cualquiera puede auditar un repo antes de darle permisos a su agente. Probado en vivo con claude -p. Enséñales el README con la lista de skills de seguridad/arquitectura/dev para que se lleven herramientas.</aside>
+</section>

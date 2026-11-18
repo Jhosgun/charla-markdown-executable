@@ -15,10 +15,10 @@
   },
   "format": { "shared": ["project/deck.css"], "v": 1 },
   "lists": "css",
-  "order": ["cover", "demo1", "demo2", "cierre"],
+  "order": ["cover", "demo1", "demo2", "demo3", "cierre"],
   "sections": {
-    "s1": { "description": "El problema y los casos reales de 2026.", "start": "cover" },
-    "s2": { "description": "Demo en vivo: ataque y defensa.", "start": "demo1" },
+    "s1": { "description": "El problema y los casos reales 2025-2026.", "start": "cover" },
+    "s2": { "description": "Demos en vivo: ataque, defensa y skill.", "start": "demo1" },
     "s3": { "description": "Cierre: principios de defensa.", "start": "cierre" }
   },
   "title": "Markdown is the New Executable"
