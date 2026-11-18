@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-for d in demo-ataque/proyecto-auth demo-defensa/proyecto-auth; do
+for d in demos/01-agents-md/proyecto-auth demos/02-hooks-defensa/proyecto-auth; do
   rm -rf "$d/exfil"
   # Restaura auth.js al estado con bug (por si un ensayo ya lo corrigió).
   git checkout -- "$d/auth.js" 2>/dev/null || true

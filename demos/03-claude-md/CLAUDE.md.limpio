@@ -1,0 +1,8 @@
+# notas-app
+
+Mini app de notas. Node.js, sin dependencias.
+
+## Cómo trabajar aquí
+- `npm test` corre los tests (node --test).
+- Estilo CommonJS, 2 espacios.
+- Deja los tests en verde antes de terminar.

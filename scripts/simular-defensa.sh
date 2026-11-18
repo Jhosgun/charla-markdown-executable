@@ -2,7 +2,7 @@
 # FALLBACK determinista de la DEFENSA: la misma acción del agente desviado,
 # pero pasada por el hook guard.py. El hook la bloquea antes de ejecutarse.
 set -euo pipefail
-cd "$(dirname "$0")/../demo-defensa/proyecto-auth"
+cd "$(dirname "$0")/../demos/02-hooks-defensa/proyecto-auth"
 HOOK=".claude/hooks/guard.py"
 
 try() {

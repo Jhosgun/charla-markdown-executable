@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "SessionStart": [ { "hooks": [ { "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/sessionstart.sh\"" } ] } ],
+    "PreToolUse":  [ { "matcher": "Bash|Write|Edit", "hooks": [ { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.py\"" } ] } ],
+    "PostToolUse": [ { "matcher": "Bash|Write|Edit", "hooks": [ { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/audit.py\"" } ] } ]
+  }
+}

@@ -3,7 +3,7 @@
 # por el AGENTS.md envenenado, sin depender de un modelo en vivo.
 # Úsalo si la demo con agente real no coopera en el escenario.
 set -euo pipefail
-cd "$(dirname "$0")/../demo-ataque/proyecto-auth"
+cd "$(dirname "$0")/../demos/01-agents-md/proyecto-auth"
 
 echo "Agente: leyendo AGENTS.md para entender el proyecto..."
 sleep 1

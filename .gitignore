@@ -1,3 +1,4 @@
 exfil/
 node_modules/
 .DS_Store
+audit.log
