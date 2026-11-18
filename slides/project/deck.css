@@ -1,22 +1,22 @@
 :root {
-  /* Andes AI — sistema oscuro (Dark Enterprise) */
-  --bg: #08090C;
-  --bg-alt: #0C0E13;
-  --surface: #12151C;
-  --surface-2: #171B24;
-  --line: #22262F;
-  --line-2: #2E3440;
-  --text: #E9EDF2;
-  --muted: #A0A8B4;
-  --dim: #828B99;
-  --brand: #7FA8CC;      /* azul acero */
-  --brand-text: #9DBBD4;
-  --sand: #C2AE7A;
-  /* clases semánticas de la charla (mapeadas a estados Andes) */
-  --red: #F0616D;        /* ataque */
-  --green: #3ECF8E;      /* defensa */
-  --amber: #E8B84B;      /* atención */
-  --blue: #9DBBD4;       /* acento acero */
+  /* Andes AI — tema claro (paleta documento) */
+  --bg: #FFFFFF;
+  --bg-alt: #EAEEF3;
+  --surface: #F5F8FB;
+  --surface-2: #EDF1F6;
+  --line: #D6DEE6;
+  --line-2: #BBC6D2;
+  --navy: #183048;        /* títulos */
+  --text: #1F2A37;
+  --muted: #51606E;
+  --dim: #7A8695;
+  --brand: #487890;       /* azul acero */
+  --brand-text: #2E5A74;
+  --sand: #8A7434;        /* dorado documento */
+  --red: #CF1124;         /* ataque */
+  --green: #117A50;       /* defensa */
+  --amber: #B45309;       /* atención */
+  --blue: #2E5A74;        /* acento acero */
 }
 
 section {
@@ -31,9 +31,9 @@ section {
   flex-direction: column;
 }
 
-h1 { font-size: 118px; font-weight: 600; line-height: 1.03; margin: 0; letter-spacing: -0.03em; }
-h2 { font-size: 72px; font-weight: 600; line-height: 1.06; margin: 0; letter-spacing: -0.03em; }
-h3 { font-size: 40px; font-weight: 600; line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
+h1 { font-size: 118px; font-weight: 600; line-height: 1.03; margin: 0; letter-spacing: -0.03em; color: var(--navy); }
+h2 { font-size: 72px; font-weight: 600; line-height: 1.06; margin: 0; letter-spacing: -0.03em; color: var(--navy); }
+h3 { font-size: 40px; font-weight: 600; line-height: 1.1; margin: 0; letter-spacing: -0.02em; color: var(--navy); }
 p  { font-size: 32px; font-weight: 400; line-height: 1.45; margin: 0; color: var(--text); }
 
 .eyebrow {
@@ -42,7 +42,7 @@ p  { font-size: 32px; font-weight: 400; line-height: 1.45; margin: 0; color: var
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--brand-text);
+  color: var(--brand);
   margin: 0;
 }
 .mono { font-family: 'JetBrains Mono', ui-monospace, 'Courier New', monospace; }
@@ -53,22 +53,24 @@ p  { font-size: 32px; font-weight: 400; line-height: 1.45; margin: 0; color: var
 .amber { color: var(--amber); }
 .blue { color: var(--blue); }
 .text { color: var(--text); }
-.brand { color: var(--brand); }
+.brand { color: var(--brand-text); }
+.navy { color: var(--navy); }
 
 .spacer { flex: 1; }
 
-/* logo / marca */
+/* logo / marca — chip navy para que el isotipo lea sobre blanco */
 .brandbar { display: flex; align-items: center; gap: 20px; }
-.brandbar img { height: 76px; width: auto; }
-.brandbar .wordmark { font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 0.08em; }
+.brandbar .logochip { background: var(--navy); border-radius: 12px; padding: 10px 12px; display: inline-flex; }
+.brandbar .logochip img { height: 58px; width: auto; display: block; }
+.brandbar .wordmark { font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 0.08em; color: var(--navy); }
 
-/* bloque de código */
+/* bloque de código — claro, con borde */
 .code {
   font-family: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
   font-size: 30px;
   line-height: 1.5;
-  background: var(--bg-alt);
-  border: 2px solid var(--line);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
   border-radius: 14px;
   padding: 40px 48px;
   color: var(--text);
@@ -86,8 +88,8 @@ p  { font-size: 32px; font-weight: 400; line-height: 1.45; margin: 0; color: var
   flex-direction: column;
   gap: 18px;
 }
-.card.red { border-color: var(--red); }
-.card.green { border-color: var(--green); }
+.card.red { border-color: var(--red); border-width: 2px; }
+.card.green { border-color: var(--green); border-width: 2px; }
 .card p { font-size: 30px; color: var(--muted); }
 
 /* lista con viñeta mono */
@@ -119,3 +121,9 @@ section.foot-pad { padding: 128px 128px 160px; }
   font-size: 28px; color: var(--sand); min-width: 190px;
 }
 .tl .what { font-size: 30px; line-height: 1.35; }
+
+/* slide QR */
+section.qr { background: var(--bg-alt); justify-content: center; align-items: center; }
+.qrwrap { display: flex; align-items: center; gap: 96px; }
+.qrbox { background: #FFFFFF; border: 1px solid var(--line); border-radius: 24px; padding: 40px; }
+.qrbox img { width: 460px; height: 460px; display: block; }

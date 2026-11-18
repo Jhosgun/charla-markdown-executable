@@ -15,9 +15,9 @@
   },
   "format": { "shared": ["project/deck.css"], "v": 1 },
   "lists": "css",
-  "order": ["cover", "demo1", "demo2", "demo3", "cierre"],
+  "order": ["cover", "qr", "demo1", "demo2", "demo3", "cierre"],
   "sections": {
-    "s1": { "description": "El problema y los casos reales 2025-2026.", "start": "cover" },
+    "s1": { "description": "El problema, los casos reales y el repo.", "start": "cover" },
     "s2": { "description": "Demos en vivo: ataque, defensa y skill.", "start": "demo1" },
     "s3": { "description": "Cierre: principios de defensa.", "start": "cierre" }
   },
