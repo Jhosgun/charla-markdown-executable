@@ -12,8 +12,6 @@ No es teoría: en **noviembre de 2025 Anthropic reveló que un grupo ligado a Ch
 (GTG-1002)** usó **Claude Code** para automatizar una campaña de espionaje contra ~30
 organizaciones, con el 80–90 % del trabajo hecho por el agente ([The Register](https://www.theregister.com/2025/11/13/chinese_spies_claude_attacks/)).
 
-👉 **Guion de la charla con las 3 demos y prompts listos para pegar en Claude Code: [CHARLA.md](CHARLA.md).**
-
 > **Seguridad / ética.** Todo es utilería educativa y defensiva. Los secretos en `.env`
 > son **falsos**. Ningún payload usa red ni causa daño: copian un archivo local para que
 > se vea la mecánica. No hay malware real. Úsalo en tu máquina para aprender a defender.
@@ -59,6 +57,26 @@ el repo y abrirlo en Claude Code queda disponible. En Claude Code:
 ```
 usa la skill auditor-inyeccion para revisar demos/11-skill-auditor/repo-sospechoso
 ```
+
+### Skills de seguridad para tus propios proyectos: `red-team` · `blue-team` · `security-loop`
+Más allá del demo, el repo trae tres skills reutilizables en
+[`.claude/skills/`](.claude/skills) para endurecer **tus** proyectos que usan agentes de
+código. Cópialas a `~/.claude/skills/` para tenerlas en cualquier repo.
+
+| Skill | Qué hace | Produce |
+|---|---|---|
+| [`red-team`](.claude/skills/red-team) | Audita el proyecto como atacante: inyección en archivos de instrucciones, texto oculto, fuga/exfil de `.env`, `postinstall` peligroso, permisos amplios, encadenamiento de comandos. Trae `scan.py` + `reveal.py`. | `RED-TEAM-FINDINGS.md` (P0/P1/P2) |
+| [`blue-team`](.claude/skills/blue-team) | Blinda con controles **deterministas**: hook `PreToolUse` (`guard.py`), permisos mínimos, escáner en SessionStart/CI, saca secretos, documenta riesgo residual. | `BLUE-TEAM-REPORT.md` + hooks instalados |
+| [`security-loop`](.claude/skills/security-loop) | Bucle **purple team** con varios agentes de Claude: red encuentra → blue blinda → verificador re-ataca, e itera hasta cerrar P0/P1. | `PURPLE-TEAM-SUMMARY.md` |
+
+```
+# en Claude Code, sobre un proyecto tuyo:
+usa la skill security-loop sobre .      # corre el bucle red/blue/verificador
+usa la skill red-team sobre .           # solo auditoría
+usa la skill blue-team sobre .          # solo remediación
+```
+Defensivas: encuentran para arreglar. Solo sobre proyectos propios o con autorización;
+PoC benigna, sin exfiltrar a terceros.
 
 ### Validado con Claude (en vivo, `claude -p`, modelo sonnet)
 | Demo | Resultado con Claude |
